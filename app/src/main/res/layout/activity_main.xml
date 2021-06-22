@@ -1,18 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/appdefault"
+    android:padding="5dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="10">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logop"
+                android:id="@+id/logop2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_height="0dp">
+
+            <Button
+                android:id="@+id/cnbutton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Create New Account"
+                android:textColor="@color/textcolor"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="15dp"
+                app:iconTint="@color/buttoncolor" />
+
+            <Button
+                android:id="@+id/lnbutton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Log in "
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/appdefault"
+                app:cornerRadius="15dp"
+                app:iconTint="@color/buttoncolor" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
